@@ -1,6 +1,6 @@
 import { CanvasApp } from './../../utils/components/canvas-app';
 import { Rect } from './../../utils/components/rect';
-import { DrawFactory } from './../../utils/factories/draw-factory.ts';
+import { DrawFactory } from './../../utils/factories/draw-factory';
 
 
 /* DrawFactory */

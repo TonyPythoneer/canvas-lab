@@ -42,6 +42,14 @@ export class DrawFactory {
         this._ctx.fillRect(x, y, w, h)
         return this
     }
+    strokeRect(x: number, y: number, w: number, h: number): DrawFactory {
+        this._ctx.strokeRect(x, y, w, h)
+        return this
+    }
+    clearRect(x: number, y: number, w: number, h: number): DrawFactory {
+        this._ctx.clearRect(x, y, w, h)
+        return this
+    }
     strokeStyle(style: string | CanvasGradient | CanvasPattern): DrawFactory {
         this._ctx.strokeStyle = style;
         return this
