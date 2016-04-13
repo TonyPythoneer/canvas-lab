@@ -1,22 +1,5 @@
-/* CanvasApp */
-class CanvasApp {
-    private _body: HTMLElement = document.body;
-    private _canvas: HTMLCanvasElement = document.createElement('canvas');
-    constructor(w: number = 300, h: number = 150) {
-        // Initial html
-        this._body.appendChild(this._canvas);
-        this._canvas.width = w;
-        this._canvas.height = h;
-    }
-    get canvas(): HTMLCanvasElement {
-        return this._canvas;
-    }
-}
-
-
-/* DrawFactory */
-class DrawFactory {
-    private _ctx: CanvasRenderingContext2D;
+export class DrawFactory {
+    protected _ctx: CanvasRenderingContext2D;
     constructor(canvas: HTMLCanvasElement) {
         this._ctx = canvas.getContext("2d");
     }
@@ -68,29 +51,3 @@ class DrawFactory {
         return this;
     }
 }
-
-
-function draw() {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    for (var i = 0; i < 10; i++) {
-        ctx.lineWidth = 1 + i;
-        ctx.beginPath();
-        ctx.moveTo(5 + i * 14, 5);
-        ctx.lineTo(5 + i * 14, 140);
-        ctx.stroke();
-    }
-}
-/* main */
-function main() {
-    let canvasApp = new CanvasApp(150, 150);
-    let drawFactory = new DrawFactory(canvasApp.canvas)
-    for (let i = 0; i < 10; i++) {
-        drawFactory
-            .lineWidth(1 + i)
-            .beginPath()
-            .moveTo(5 + i * 14, 5)
-            .lineTo(5 + i * 14, 140)
-            .stroke();
-    }
-}
-main()
