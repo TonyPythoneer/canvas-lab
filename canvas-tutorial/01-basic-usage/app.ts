@@ -15,11 +15,12 @@ class RectDrawFactory extends DrawFactory {
 }
 
 
-/* global variables*/
+/* Global variables*/
 const canvasApp = new CanvasApp(150, 150);
 const rectDrawFactory = new RectDrawFactory(canvasApp.canvas)
 
-/* main */
+
+/* Main */
 function main() {
     let rects = {
         redRect: new Rect(
