@@ -1,0 +1,5 @@
+const APP = 'SIDE_BAR'
+
+export const SHOW_TUTORIAL = `${APP}:SHOW_TUTORIAL`;
+export const SHOW_01_BASIC_USAGE = `${APP}:SHOW_01_BASIC_USAGE`;
+export const SHOW_02_DRAWING_SHAPES = `${APP}:SHOW_02_DRAWING_SHAPES`;
