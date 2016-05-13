@@ -1,6 +1,13 @@
+# Node.js
+#
 node_modules/
+*.log
 
+# typescript
+#
 typings/
-*.js
-!bundle.js
-!webpack.config.js
+
+# sass
+#
+.sass-cache
+
