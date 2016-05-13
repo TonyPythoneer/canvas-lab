@@ -5,9 +5,24 @@
     border-width: 5px;
 }
 
+/* mq */
+@media (max-width: 768px) {
+    .section {
+        background-color: gray;
+    }
+}
+@media (min-width: 769px) {
+    .section {
+        display: inline-flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    .demo-row {
+        display:inline-flex;
+    }
+}
 
 /* main */
-.fuck{}
 body {
     margin: 0 10px;
 }
@@ -23,21 +38,12 @@ body {
 }
 
 .main-page {
-    -webkit-flex: 1;
-            flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+          @include debug-border(rgb(106, 197, 172));
 }
 
-.demo {
+.demo-item {
     @include debug-border(#FDC72F);
+    flex: 1;
 }
-
-.section {
-    flex-direction:row;
-}
-
-
-.test {
-    display: inline-flex;
-}
-
-

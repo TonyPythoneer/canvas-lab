@@ -1703,7 +1703,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    DemoList.prototype.render = function () {
-	        return (React.createElement("div", {className: "test"}, React.createElement(SimpleExampleDemo_1.default, null), React.createElement(WindowDemo_1.default, null)));
+	        return (React.createElement("div", {className: "section"}, React.createElement("div", {className: "demo-row"}, React.createElement(SimpleExampleDemo_1.default, null), React.createElement(WindowDemo_1.default, null), React.createElement(WindowDemo_1.default, null)), React.createElement("div", {className: "demo-row"}, React.createElement(SimpleExampleDemo_1.default, null), React.createElement(WindowDemo_1.default, null), React.createElement(WindowDemo_1.default, null))));
 	    };
 	    return DemoList;
 	}(React.Component));
@@ -1776,7 +1776,7 @@
 	    }
 	    CanvasDemo.prototype.render = function () {
 	        var _a = this.props, title = _a.title, width = _a.width, height = _a.height, renderCanvas = _a.renderCanvas;
-	        return (React.createElement("div", {className: "demo"}, React.createElement("div", null, title), React.createElement("canvas", {ref: renderCanvas, width: width, height: height})));
+	        return (React.createElement("div", {className: "demo-item"}, React.createElement("div", null, title), React.createElement("canvas", {ref: renderCanvas, width: width, height: height})));
 	    };
 	    return CanvasDemo;
 	}(React.Component));
