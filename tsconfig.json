@@ -2,11 +2,15 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es5",
+        "jsx": "react",
+        "sourceMap": true,
         "declaration": false,
         "noImplicitAny": false,
         "removeComments": true,
-        "preserveConstEnums": true,
-        "noLib": false
+        "outDir": "dist",
+        "rootDir": "src",
+        "noResolve": true,
+        "experimentalDecorators": true
     },
     "exclude": [
         "node_modules"

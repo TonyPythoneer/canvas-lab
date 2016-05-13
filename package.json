@@ -7,17 +7,32 @@
     "url": "git@github.com:TonyPythoneer/canvas-lab.git"
   },
   "scripts": {
-    "build": "webpack",
-    "build:watch": "webpack -w"
+    "build": "concurrently --kill-others \"npm run build:ts\" \"npm run build:jade\"",
+    "build:ts": "node_modules/.bin/webpack",
+    "build:jade": "node_modules/.bin/webpack",
+    "watch": "concurrently --kill-others \"npm run watch:ts\" \"npm run watch:jade\" \"npm run watch:scss\"",
+    "watch:ts": "node_modules/.bin/webpack -w",
+    "watch:jade": "node_modules/.bin/jade -w index.jade",
+    "watch:scss": "scss --watch --style compressed scss:css"
   },
   "author": "TonyPythoneer",
   "license": "ISC",
   "typescript": {
     "definition": "typings/tsd.d.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2"
+  },
   "devDependencies": {
+    "jade": "^1.11.0",
+    "remote-redux-devtools": "^0.3.2",
+    "ts-loader": "^0.8.2",
     "tsd": "^0.6.5",
-    "typescript": "^1.8.9"
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.0"
   }
 }
