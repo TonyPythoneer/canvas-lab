@@ -1,0 +1,43 @@
+/* mixin */
+@mixin debug-border($color) {
+    border-color: $color;
+    border-style: solid;
+    border-width: 5px;
+}
+
+
+/* main */
+.fuck{}
+body {
+    margin: 0 10px;
+}
+
+.container {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.side-bar {
+	@include debug-border(rgb(106, 197, 172));
+    width: 200px;
+}
+
+.main-page {
+    -webkit-flex: 1;
+            flex: 1;
+}
+
+.demo {
+    @include debug-border(#FDC72F);
+}
+
+.section {
+    flex-direction:row;
+}
+
+
+.test {
+    display: inline-flex;
+}
+
+
