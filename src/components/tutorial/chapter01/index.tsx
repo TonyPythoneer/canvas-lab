@@ -8,7 +8,7 @@ export default class DemoList extends React.Component<any, any> {
     render() {
         //<WindowDemo/>
         return (
-            <div className="section">
+            <div className="demo-col">
                 <div className="demo-row">
                     <SimpleExampleDemo/>
                     <WindowDemo/>

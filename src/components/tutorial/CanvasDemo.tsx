@@ -11,12 +11,12 @@ export default class CanvasDemo extends React.Component<ICanvasDemoProps, any> {
     render() {
         const {title, width, height, renderCanvas} = this.props;
         return (
-            <div className="demo-item">
+            <section className="demo-item">
                 <div>{title}</div>
                 <canvas ref={renderCanvas}
                     width={width}
                     height={height}></canvas>
-            </div>
+            </section>
         )
     }
 }
